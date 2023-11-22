@@ -1,0 +1,59 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+.hamburger {
+  margin-left: 30px;
+  transition: all 0.6s ease-in-out;
+}
+.bar {
+  width: 30px;
+  height: 5px;
+  background-color: red;
+  margin-top: 5px;
+  transition: all 0.6s ease-in-out;
+}
+
+/* Close */
+.hamburger-icons--close.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-icons--close.active .bar:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+  background-color: red;
+  border-radius: 18px;
+}
+
+.hamburger-icons--close.active .bar:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+  background-color: red;
+  border-radius: 18px;
+}
+
+/* Arrow Down */
+.hamburger-icons--arrowdown.active .bar:nth-child(2) {
+  /* opacity: 0; */
+  transform: rotate(90deg);
+  border-radius: 18px;
+}
+
+.hamburger-icons--arrowdown.active .bar:nth-child(1) {
+  transform: translateY(18px) translateX(2px) rotate(45deg);
+  background-color: red;
+  border-radius: 18px;
+  width: 15px;
+  /* animation-delay: 1s; */
+}
+
+.hamburger-icons--arrowdown.active .bar:nth-child(3) {
+  transform: translateY(-2px) translateX(13px) rotate(-45deg);
+  background-color: red;
+  border-radius: 18px;
+  width: 15px;
+  /* animation-delay: 2s; */
+}
+
+/* Những cái khác làm tương tự */

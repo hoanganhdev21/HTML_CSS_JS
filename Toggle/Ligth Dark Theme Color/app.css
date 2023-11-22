@@ -1,0 +1,78 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #34304655;
+  transition: 0.5s;
+  height: 100vh;
+}
+
+.changeTheme {
+  margin: 100px auto 0;
+  width: 80px;
+  display: block;
+  background-color: #cbcbcb;
+  border-radius: 20px;
+  position: relative;
+  transition: 0.5s;
+  height: 40px;
+}
+
+.changeTheme::before {
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  content: "";
+  transition: 0.5s;
+  box-shadow: 0 5px 10px #b5b4b4;
+  border-radius: 50%;
+}
+
+.changeTheme input {
+  display: none;
+}
+
+.list {
+  padding: 0;
+  margin: 30px auto;
+  list-style: none;
+  text-align: left;
+  width: 400px;
+  display: block;
+}
+
+.list li {
+  padding: 20px;
+  color: #555;
+  background-color: #ddd;
+  margin-bottom: 1px;
+}
+
+.changeTheme:has(input:checked) {
+  background-color: #4cb774;
+}
+/* :has Kiểm tra nếu tồn tại 1 input được nhấn vào nút check trong changTheme thì đổi màu */
+
+.changeTheme:has(input:checked)::before {
+  left: calc(100% - 35px);
+}
+
+body:has(input[id="changTheme"]:checked) {
+  background-image: linear-gradient(
+    43deg,
+    #4158d0 0%,
+    #c850c0 46%,
+    #ffcc70 100%
+  );
+}
+
+body:has(input[id="changTheme"]:checked) .list li {
+  color: #fff;
+  background-color: unset;
+}

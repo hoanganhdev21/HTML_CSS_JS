@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="input-box">
+      <input type="text" placeholder="Search..." />
+      <span class="search">
+        <ion-icon name="search-outline"></ion-icon>
+      </span>
+
+      <span class="close-icon">
+        <ion-icon name="close-outline"></ion-icon>
+      </span>
+    </div>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script>
+      const inputBox = document.querySelector(".input-box");
+      const searchIcon = document.querySelector(".search");
+      const closeIcon = document.querySelector(".close-icon");
+
+      searchIcon.addEventListener("click", () => {
+        inputBox.classList.add("open");
+        console.log("Search");
+      });
+
+      closeIcon.addEventListener("click", () => {
+        inputBox.classList.remove("open");
+        console.log("Search REMOVE");
+      });
+    </script>
+  </body>
+</html>

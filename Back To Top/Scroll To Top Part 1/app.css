@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Alkatra:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Alkatra", cursive;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  padding: 20px 150px;
+}
+
+h1 {
+  font-size: 32px;
+  margin: 20px 0px;
+}
+
+h3 {
+  font-size: 26px;
+}
+
+p {
+  margin-bottom: 30px;
+  line-height: 1.4em;
+  text-align: justify;
+}
+
+#back-to-top-btn {
+  position: fixed;
+  display: none;
+  bottom: 20px;
+  right: 20px;
+  font-size: 26px;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  color: #333;
+  cursor: pointer;
+  outline: none;
+  border: 3px solid #333;
+  border-radius: 50%;
+  transition: all 0.2s ease-in-out;
+  transition-property: background-color, color;
+}
+
+#back-to-top-btn:hover,
+#back-to-top-btn:focus {
+  background-color: #333;
+  color: #fff;
+}
+
+@media screen and (max-width: 992px) {
+  .container {
+    padding: 20px 100px;
+  }
+
+  #back-to-top-btn {
+    position: fixed;
+    display: none;
+    bottom: 20px;
+    right: 20px;
+    font-size: 22px;
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    color: #333;
+    cursor: pointer;
+    outline: none;
+    border: 3px solid #333;
+    border-radius: 50%;
+    transition: all 0.2s ease-in-out;
+    transition-property: background-color, color;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+
+  .container {
+    padding: 10px 50px;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  #back-to-top-btn {
+    position: fixed;
+    display: none;
+    bottom: 20px;
+    right: 20px;
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    color: #333;
+    cursor: pointer;
+    outline: none;
+    border: 3px solid #333;
+    border-radius: 50%;
+    transition: all 0.2s ease-in-out;
+    transition-property: background-color, color;
+    animation: btnExit 0.5s ease-in;
+  }
+}
+
+/* Animation */
+@keyframes btnExit {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}

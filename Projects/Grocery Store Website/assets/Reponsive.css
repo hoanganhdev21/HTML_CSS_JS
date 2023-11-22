@@ -1,0 +1,91 @@
+/* ====== BREAKPOINT ======= */
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+
+  section {
+    padding: 2rem;
+  }
+
+  .header {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #menu-btn {
+    display: inline-block;
+  }
+
+  /* active menu icons */
+  #menu-btn.fa-times {
+    background: red;
+    color: #fff;
+  }
+
+  .header .search-form {
+    width: 90vw;
+  }
+
+  .header .navbar {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    height: 100vh;
+    width: 50%;
+    box-shadow: var(--box-shadow);
+    /* border-radius: 0.5rem; */
+    background-color: #fff;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .header .navbar.active {
+    right: 0%;
+  }
+
+  .header .navbar a {
+    font-size: 2rem;
+    margin: 2rem 2.5rem;
+    display: block;
+  }
+
+  /* Active color links reponsive */
+  .header .navbar a.active {
+    color: var(--orange);
+  }
+
+  /* Ẩn underline hover a */
+  .header .navbar a::after {
+    content: " ";
+    position: absolute;
+    left: 0%;
+    bottom: 0;
+    height: 0;
+    width: 0%;
+  }
+
+  .header .navbar a:hover:before,
+  .header .navbar a:focus:before {
+    width: 0%;
+  }
+
+  .header .navbar a:hover::after,
+  .header .navbar a:focus::after {
+    width: 0%;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+
+  .heading {
+    font-size: 2.5rem;
+  }
+
+  .footer .credit {
+    font-size: 1.2rem;
+  }
+}

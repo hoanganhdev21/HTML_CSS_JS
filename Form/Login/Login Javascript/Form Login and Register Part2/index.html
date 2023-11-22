@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Login and Register Two</title>
+    <link rel="stylesheet" href="app.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <!-- Sign In -->
+        <div class="form sign_in">
+          <h3>Sign In</h3>
+          <span>or use your account</span>
+          <form action="" id="form_input">
+            <div class="type">
+              <input type="email" name="" id="email" placeholder="Email" />
+            </div>
+            <div class="type">
+              <input
+                type="password"
+                name=""
+                id="password"
+                placeholder="Password"
+              />
+            </div>
+            <div class="forgot">
+              <span>Forgot your password?</span>
+            </div>
+            <button class="btn bkg">Sign In</button>
+          </form>
+        </div>
+
+        <!-- Sign Up -->
+        <div class="form sign_up">
+          <h3>Sign Up</h3>
+          <span>or use your email for register</span>
+          <form action="" id="form_input">
+            <div class="type">
+              <input type="text" name="" id="name" placeholder="Name" />
+            </div>
+            <div class="type">
+              <input type="email" name="" id="email" placeholder="Email" />
+            </div>
+            <div class="type">
+              <input
+                type="password"
+                name=""
+                id="password"
+                placeholder="Password"
+              />
+            </div>
+            <button class="btn bkg">Sign Up</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="overlay">
+        <div class="page page_signIn">
+          <h3>Wellcome Back!</h3>
+          <p>To keep width us please login width your personal info</p>
+          <button class="btn btnSign-in">Sign Up</button>
+        </div>
+
+        <div class="page page_signUp">
+          <h3>Hello Friend!</h3>
+          <p>Enter your personal details and start journey width us</p>
+          <button class="btn btnSign-up">Sign in</button>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="app.js"></script>
+</html>

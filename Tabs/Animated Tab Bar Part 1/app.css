@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Alkatra:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Alkatra", cursive;
+}
+:root {
+  --clr: #222327;
+  --green: #29fd53;
+  --lig: linear-gradient(45deg, #2196f3, #e91e63);
+  --white: #fff;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: var(--clr);
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--lig);
+  width: 400px;
+  height: 70px;
+  position: relative;
+  border-radius: 10px;
+}
+
+.navigation ul {
+  display: flex;
+  width: 350px;
+}
+
+.navigation ul li {
+  /* position: relative; */
+  list-style: none;
+  width: 70px;
+  height: 70px;
+  z-index: 1;
+  /* background-color: #222327; */
+}
+.navigation ul li a {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  font-weight: 700;
+}
+
+.navigation ul li a .icon {
+  position: relative;
+  display: block;
+  line-height: 75px;
+  font-size: 1.5em;
+  text-align: center;
+  transition: 0.5s;
+  color: var(--white);
+}
+
+.navigation ul li.active a .icon {
+  transform: translateY(-35px);
+}
+
+.navigation ul li a .text {
+  position: absolute;
+  color: var(--white);
+  font-weight: 700;
+  font-size: 0.75em;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.navigation ul li.active a .text {
+  opacity: 1;
+  transform: translateY(10px);
+}
+
+.indicator {
+  position: absolute;
+  top: -50%;
+  height: 70px;
+  width: 70px;
+  background: var(--lig);
+  border-radius: 50%;
+  border: 5px solid var(--clr);
+  transition: 0.5s ease-in;
+}
+
+.indicator::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  left: -20px;
+  border-top-right-radius: 20px;
+  box-shadow: 1px -10px 0 0 var(--clr);
+}
+
+.indicator::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  right: -20px;
+  border-top-left-radius: 20px;
+  box-shadow: -1px -10px 0 0 var(--clr);
+}
+
+.navigation ul li:nth-child(1).active ~ .indicator {
+  transform: translateX(calc(70px * 0));
+}
+.navigation ul li:nth-child(2).active ~ .indicator {
+  transform: translateX(calc(70px * 1));
+}
+.navigation ul li:nth-child(3).active ~ .indicator {
+  transform: translateX(calc(70px * 2));
+}
+.navigation ul li:nth-child(4).active ~ .indicator {
+  transform: translateX(calc(70px * 3));
+}
+.navigation ul li:nth-child(5).active ~ .indicator {
+  transform: translateX(calc(70px * 4));
+}

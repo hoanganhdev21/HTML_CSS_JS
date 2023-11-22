@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Profile Card Hover Animation | CodingNepal</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrapper">
+        <a href="#">
+          <img src="https://images.unsplash.com/photo-1520962922320-2038eebab146?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8bmF0dXJhbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="" />
+        </a>
+        <div class="title">Nguyễn Hoàng Anh</div>
+        <div class="place">Khánh Hồng, Yên Khánh, Ninh Bình</div>
+      </div>
+      <div class="content">
+        <p>User Interface Designer and <br />front-end developer</p>
+        <div class="buttons">
+          <div class="btn">
+            <button>Message</button>
+          </div>
+          <div class="btn">
+            <button>Following</button>
+          </div>
+        </div>
+      </div>
+      <div class="icons">
+        <li>
+          <a href="#"><span class="fab fa-facebook-f"></span></a>
+        </li>
+        <li>
+          <a href="#"><span class="fab fa-twitter"></span></a>
+        </li>
+        <li>
+          <a href="#"><span class="fab fa-instagram"></span></a>
+        </li>
+      </div>
+    </div>
+    <script>
+      const img = document.querySelector("img");
+      const icons = document.querySelector(".icons");
+      img.onclick = function () {
+        this.classList.toggle("active");
+        icons.classList.toggle("active");
+      };
+    </script>
+  </body>
+</html>

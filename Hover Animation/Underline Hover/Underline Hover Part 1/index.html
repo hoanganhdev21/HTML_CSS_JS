@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Underline hover part 1</title>
+  </head>
+  <style>
+    body {
+      background-color: #123;
+    }
+
+    ul {
+      width: 600px;
+      list-style-type: none;
+      margin: 40px auto;
+      padding: 0;
+    }
+
+    ul li {
+      width: 25%;
+      float: left;
+    }
+
+    ul li a {
+      padding: 12px 0px;
+      margin: 0px 12px;
+      display: block;
+      text-decoration: none;
+      position: relative;
+      text-align: center;
+      color: #fff;
+      font-size: 18px;
+      text-transform: uppercase;
+      font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic,
+        AppleGothic, sans-serif;
+    }
+
+    ul li a:before {
+      content: " ";
+      position: absolute;
+      left: 0%;
+      bottom: 10px;
+      height: 1px;
+      width: 0%;
+      background-color: #fff;
+      transition: width 0.5s ease-in-out;
+    }
+
+    ul li a:after {
+      content: " ";
+      position: absolute;
+      right: 0%;
+      bottom: 10px;
+      height: 1px;
+      width: 0%;
+      background-color: #fff;
+      transition: width 0.5s ease-in-out;
+    }
+
+    ul li a:hover:before,
+    ul li a:focus:before {
+      width: 50%;
+    }
+
+    ul li a:hover:after,
+    ul li a:focus:after {
+      width: 50%;
+    }
+
+    .layout:after {
+      visibility: hidden;
+      display: block;
+      font-size: 0;
+      content: " ";
+      clear: both;
+      height: 0;
+    }
+
+    .layout {
+      display: inline-block;
+    }
+  </style>
+  <body>
+    <ul>
+      <li><a href="#">Lorem</a></li>
+      <li><a href="#">Ipsum</a></li>
+      <li><a href="#">Dolor sit</a></li>
+      <li><a href="#">Amet</a></li>
+    </ul>
+  </body>
+</html>

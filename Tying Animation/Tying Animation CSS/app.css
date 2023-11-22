@@ -1,0 +1,46 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #1d1f20 !important;
+}
+
+h2 {
+  font-size: 3rem;
+  color: #d7b94c;
+}
+
+.tying-animation {
+  position: relative;
+}
+
+.tying-animation::after {
+  position: absolute;
+  content: "";
+  right: -10px;
+  width: 100%;
+  color: #fff;
+  background-color: #1d1f20;
+  animation: typing 4s steps(24) forwards, caret 1s infinite;
+  /* steps(28) là số chữ cái tính cả khoảng trắng*/
+}
+
+@keyframes typing {
+  to {
+    width: 10;
+  }
+}
+
+@keyframes caret {
+  from {
+    color: transparent;
+    /* transparent là màu trong suốt */
+  }
+}

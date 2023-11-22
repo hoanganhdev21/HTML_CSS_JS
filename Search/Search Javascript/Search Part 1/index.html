@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search Part 1</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .search-container {
+      width: 70px;
+      height: 70px;
+      background-color: #fff;
+      border-radius: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 16px 28px;
+      gap: 24px;
+      cursor: pointer;
+      transition: all 0.8s ease;
+      overflow: hidden;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+
+    .search-container.active {
+      width: 450px;
+      justify-content: flex-start;
+      cursor: default;
+    }
+
+    .search-container i {
+      font-size: 22px;
+    }
+
+    input {
+      display: none;
+      outline: none;
+      border: none;
+      font-size: 18px;
+      background-color: transparent;
+    }
+
+    i.fa-times {
+      display: none;
+      cursor: pointer;
+      margin-left: auto;
+    }
+
+    .search-container.active > :where(i, input) {
+      display: block;
+    }
+  </style>
+  <body>
+    <div class="search-container">
+      <i class="fa fa-search"></i>
+      <input type="text" placeholder="Search..." class="search-input" />
+      <i class="fa fa-times"></i>
+    </div>
+  </body>
+  <script>
+    const searchContainer = document.querySelector(".search-container");
+    const closeBtn = document.querySelector(".fa-times");
+    // console.log(searchContainer);
+    searchContainer.addEventListener("click", function () {
+      searchContainer.classList.add("active");
+    });
+    closeBtn.addEventListener("click", function (e) {
+      e.stopImmediatePropagation();
+      searchContainer.classList.remove("active");
+    });
+  </script>
+</html>

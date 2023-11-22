@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animate Words</title>
+  </head>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      border: none;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: #1e1c27;
+      color: white;
+    }
+
+    h1 {
+      font-size: 3em;
+    }
+
+    .span__parent {
+      position: relative;
+      display: inline-block;
+      color: red;
+      height: 1.25em;
+      vertical-align: bottom;
+      overflow: hidden;
+    }
+
+    .span-item {
+      display: block;
+      animation: animateWords 5s infinite ease-in-out;
+    }
+
+    @keyframes animateWords {
+      0% {
+        transform: translateY(0%);
+      }
+      25% {
+        transform: translateY(-100%);
+      }
+      50% {
+        transform: translateY(-200%);
+      }
+      75% {
+        transform: translateY(-300%);
+      }
+      100% {
+        transform: translateY(-400%);
+      }
+    }
+  </style>
+  <body>
+    <h1>
+      Never gona
+      <span class="span__parent">
+        <span class="span-item">Frontend Developer</span>
+        <span class="span-item">ReactJS Developer</span>
+        <span class="span-item">Freelancer</span>
+        <span class="span-item">Fullstack</span>
+        <span class="span-item">Designer</span>
+      </span>
+    </h1>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #111;
+  width: 100%;
+  height: 100vh;
+}
+
+.main-tying {
+  display: flex;
+  align-items: center;
+}
+
+.tying-animation {
+  margin: 2rem 5rem;
+  /* background-color: red; */
+}
+
+.text {
+  position: relative;
+  color: #fff;
+  font-size: 3em;
+  font-weight: 600;
+}
+
+.first-text {
+  color: orangered;
+}
+
+.second-text::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* color: red; */
+  background-color: #111;
+  border-left: 2px solid teal;
+  animation: tyinganimation 5s steps(12) infinite;
+}
+
+@keyframes tyinganimation {
+  40%,
+  60% {
+    left: calc(100% + 10px);
+  }
+  100% {
+    left: 0%;
+  }
+}

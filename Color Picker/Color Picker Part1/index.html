@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Picker Part 1</title>
+  </head>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+    }
+    input {
+      width: 200px;
+      height: 200px;
+      outline: none;
+      border: 0;
+    }
+  </style>
+  <body>
+    <!-- Color picker -->
+    <input type="color" id="myPicker" value="#ff0000" />
+    <span id="value"></span>
+  </body>
+  <script>
+    const colorPicker = document.getElementById("myPicker");
+    const value = document.getElementById("value");
+    colorPicker.addEventListener("change", () => {
+      value.innerHTML = colorPicker.value;
+      value.style.color = colorPicker.value;
+    });
+  </script>
+</html>
